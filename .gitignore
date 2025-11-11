@@ -1,0 +1,15 @@
+# === Frontend (React) ===
+finvault-frontend/node_modules/
+finvault-frontend/build/
+
+# === Backend (Spring Boot) ===
+finvault-backend/target/
+
+# === Common ===
+.idea/
+.vscode/
+*.log
+*.class
+.DS_Store
+Thumbs.db
+application.properties
