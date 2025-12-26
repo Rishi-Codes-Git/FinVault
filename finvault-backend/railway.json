@@ -2,7 +2,8 @@
   "$schema": "https://railway.app/railway.schema.json",
   "build": {
     "builder": "DOCKERFILE",
-    "dockerfilePath": "Dockerfile"
+    "dockerfilePath": "finvault-backend/Dockerfile",
+    "dockerContext": "finvault-backend"
   },
   "deploy": {
     "startCommand": "java -jar /app/app.jar",
