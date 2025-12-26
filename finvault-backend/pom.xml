@@ -101,6 +101,7 @@
     </dependencies>
 
     <build>
+        <finalName>finvault-backend</finalName>
         <plugins>
             <!-- Compile with annotation processors (required for Lombok) -->
             <plugin>
