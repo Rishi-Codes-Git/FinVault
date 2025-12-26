@@ -13,7 +13,7 @@ export default function Transfer() {
     setMsg("");
     setErr("");
     try {
-      await api.post("/account/transfer", {
+      await api.post("/api/v1/account/transfer", {
         toAccountNumber: toAcc,
         amount,
         note,

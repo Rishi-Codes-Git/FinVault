@@ -12,9 +12,9 @@ export default function Login() {
   const submit = async (e) => {
     e.preventDefault();
     try {
-      const res = await api.post("/auth/login", form);
+      const res = await api.post("/api/v1/auth/login", form);
       localStorage.setItem("accessToken", res.data.accessToken);
-      const acc = await api.get("/account");
+      const acc = await api.get("/api/v1/account");
       setUser(acc.data);
       navigate("/dashboard");
     } catch (error) {

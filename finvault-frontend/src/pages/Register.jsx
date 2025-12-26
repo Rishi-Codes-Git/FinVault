@@ -10,7 +10,7 @@ export default function Register() {
   const submit = async (e) => {
     e.preventDefault();
     try {
-      await api.post("/auth/register", form);
+      await api.post("/api/v1/auth/register", form);
       navigate("/login");
     } catch (error) {
       setErr(error.response?.data?.error || "Registration failed");

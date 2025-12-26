@@ -7,7 +7,7 @@ export default function Transactions() {
   const [filter, setFilter] = useState("ALL");
 
   useEffect(() => {
-    api.get("/transactions").then((res) => setTransactions(res.data));
+    api.get("/api/v1/transactions").then((res) => setTransactions(res.data));
   }, []);
 
   const getTypeConfig = (type) => {

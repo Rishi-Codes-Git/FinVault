@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../context/AuthContext";
 
 export default function Home() {
+  const { user } = useContext(AuthContext);
+
   return (
     <div className="mt-4">
       {/* Hero Section */}
@@ -37,14 +40,26 @@ export default function Home() {
             technology. Experience seamless banking at your fingertips.
           </p>
           <div className="d-flex gap-3 justify-content-center mt-5">
-            <Link to="/register" className="btn btn-primary btn-lg px-4">
-              <i className="bi bi-person-plus me-2"></i>
-              Get Started
-            </Link>
-            <Link to="/login" className="btn btn-outline-primary btn-lg px-4">
-              <i className="bi bi-box-arrow-in-right me-2"></i>
-              Sign In
-            </Link>
+            {user ? (
+              <Link to="/dashboard" className="btn btn-primary btn-lg px-5">
+                <i className="bi bi-speedometer2 me-2"></i>
+                Go to Dashboard
+              </Link>
+            ) : (
+              <>
+                <Link to="/register" className="btn btn-primary btn-lg px-4">
+                  <i className="bi bi-person-plus me-2"></i>
+                  Get Started
+                </Link>
+                <Link
+                  to="/login"
+                  className="btn btn-outline-primary btn-lg px-4"
+                >
+                  <i className="bi bi-box-arrow-in-right me-2"></i>
+                  Sign In
+                </Link>
+              </>
+            )}
           </div>
         </div>
       </div>

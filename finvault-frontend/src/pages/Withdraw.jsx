@@ -12,7 +12,7 @@ export default function Withdraw() {
     setMsg("");
     setErr("");
     try {
-      await api.post("/account/withdraw", { amount, note });
+      await api.post("/api/v1/account/withdraw", { amount, note });
       setMsg("Withdrawal successful");
       setAmount("");
       setNote("");

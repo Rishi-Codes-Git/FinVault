@@ -12,7 +12,7 @@ export default function Deposit() {
     setMsg("");
     setErr("");
     try {
-      await api.post("/account/deposit", { amount, note });
+      await api.post("/api/v1/account/deposit", { amount, note });
       setMsg("Deposit successful");
       setAmount("");
       setNote("");

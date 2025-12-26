@@ -17,11 +17,11 @@ export default function Dashboard() {
 
   useEffect(() => {
     api
-      .get("/account")
+      .get("/api/v1/account")
       .then((res) => setAccount(res.data))
       .catch(() => setAccount(null));
     api
-      .get("/transactions")
+      .get("/api/v1/transactions")
       .then((res) => setTx(res.data))
       .catch(() => setTx([]));
   }, []);
