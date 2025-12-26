@@ -6,208 +6,127 @@ export default function Home() {
   const { user } = useContext(AuthContext);
 
   return (
-    <div className="mt-4">
-      {/* Hero Section */}
-      <div className="hero text-center mb-5">
-        <div style={{ position: "relative", zIndex: 1 }}>
-          <div className="mb-4">
-            <span
-              className="badge"
-              style={{
-                background: "rgba(14, 165, 233, 0.2)",
-                color: "#7dd3fc",
-                padding: "0.5rem 1.5rem",
-                fontSize: "0.875rem",
-                borderRadius: "50px",
-              }}
+    <div className="container py-5">
+      {/* Hero */}
+      <div className="glass p-4 p-lg-5 mb-5 position-relative overflow-hidden">
+        <div className="row align-items-center g-4">
+          <div className="col-lg-7 text-lg-start text-center">
+            <div className="d-inline-flex align-items-center gap-2 px-3 py-2 rounded-pill border border-gradient mb-3">
+              <i className="bi bi-shield-lock text-primary"></i>
+              <span className="small text-muted-light">
+                Trusted digital banking workspace
+              </span>
+            </div>
+            <h1 className="display-5 fw-bold mb-3">
+              Control every account from one secure vault.
+            </h1>
+            <p
+              className="lead text-muted-light mb-4"
+              style={{ maxWidth: "640px" }}
             >
-              🔒 Bank-Grade Security
-            </span>
-          </div>
-          <h1 className="display-4 fw-bold mb-4">
-            Welcome to <span className="text-gradient">FinVault</span>
-          </h1>
-          <p
-            className="lead mb-4"
-            style={{
-              color: "#94a3b8",
-              fontSize: "1.25rem",
-              maxWidth: "600px",
-              margin: "0 auto",
-            }}
-          >
-            Your secure digital banking vault built with enterprise-grade
-            technology. Experience seamless banking at your fingertips.
-          </p>
-          <div className="d-flex gap-3 justify-content-center mt-5">
-            {user ? (
-              <Link to="/dashboard" className="btn btn-primary btn-lg px-5">
-                <i className="bi bi-speedometer2 me-2"></i>
-                Go to Dashboard
-              </Link>
-            ) : (
-              <>
-                <Link to="/register" className="btn btn-primary btn-lg px-4">
-                  <i className="bi bi-person-plus me-2"></i>
-                  Get Started
+              Manage balances, move money, and monitor risk in real time with a
+              glass-smooth experience built for modern finance teams.
+            </p>
+            <div className="d-flex flex-wrap justify-content-center justify-content-lg-start gap-3">
+              {user ? (
+                <Link to="/dashboard" className="btn btn-primary btn-lg px-4">
+                  <i className="bi bi-speedometer2 me-2"></i>
+                  Open dashboard
                 </Link>
-                <Link
-                  to="/login"
-                  className="btn btn-outline-primary btn-lg px-4"
+              ) : (
+                <>
+                  <Link to="/register" className="btn btn-primary btn-lg px-4">
+                    <i className="bi bi-person-plus me-2"></i>
+                    Create account
+                  </Link>
+                  <Link
+                    to="/login"
+                    className="btn btn-outline-primary btn-lg px-4"
+                  >
+                    <i className="bi bi-box-arrow-in-right me-2"></i>
+                    Sign in
+                  </Link>
+                </>
+              )}
+            </div>
+            <div className="d-flex flex-wrap gap-4 mt-4">
+              <div className="d-flex align-items-center gap-2 text-muted-light">
+                <i className="bi bi-shield-lock text-primary"></i>
+                <span>JWT-secured Spring Boot APIs</span>
+              </div>
+              <div className="d-flex align-items-center gap-2 text-muted-light">
+                <i className="bi bi-hdd-network text-primary"></i>
+                <span>MySQL persistence on Railway</span>
+              </div>
+              <div className="d-flex align-items-center gap-2 text-muted-light">
+                <i className="bi bi-graph-up text-primary"></i>
+                <span>Dashboard with live charts</span>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-5">
+            <div className="p-4 glass h-100 shadow-sm">
+              <div className="d-flex justify-content-between align-items-center mb-3">
+                <span className="text-muted-light">
+                  What ships with FinVault
+                </span>
+                <span
+                  className="badge"
+                  style={{
+                    background: "rgba(14,165,233,0.15)",
+                    color: "#7dd3fc",
+                  }}
                 >
-                  <i className="bi bi-box-arrow-in-right me-2"></i>
-                  Sign In
-                </Link>
-              </>
-            )}
-          </div>
-        </div>
-      </div>
-
-      {/* Features Section */}
-      <div className="row g-4 mb-5">
-        <div className="col-md-4">
-          <div className="feature-card">
-            <div className="feature-icon">
-              <i className="bi bi-shield-check"></i>
-            </div>
-            <h5 className="fw-bold mb-3">Secure & Protected</h5>
-            <p className="text-muted-light" style={{ fontSize: "0.95rem" }}>
-              Bank-grade encryption and multi-layer security protecting your
-              assets 24/7
-            </p>
-          </div>
-        </div>
-        <div className="col-md-4">
-          <div className="feature-card">
-            <div className="feature-icon">
-              <i className="bi bi-lightning-charge"></i>
-            </div>
-            <h5 className="fw-bold mb-3">Instant Transfers</h5>
-            <p className="text-muted-light" style={{ fontSize: "0.95rem" }}>
-              Lightning-fast transactions with real-time processing and
-              notifications
-            </p>
-          </div>
-        </div>
-        <div className="col-md-4">
-          <div className="feature-card">
-            <div className="feature-icon">
-              <i className="bi bi-graph-up"></i>
-            </div>
-            <h5 className="fw-bold mb-3">Smart Analytics</h5>
-            <p className="text-muted-light" style={{ fontSize: "0.95rem" }}>
-              Comprehensive insights and visualizations of your financial
-              activity
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Banking Services */}
-      <div className="row g-4 mb-5">
-        <div className="col-md-6">
-          <div className="banking-card h-100">
-            <div className="d-flex align-items-start gap-3">
-              <div
-                style={{
-                  width: "48px",
-                  height: "48px",
-                  background: "linear-gradient(135deg, #10b981, #059669)",
-                  borderRadius: "12px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontSize: "1.5rem",
-                }}
-              >
-                <i className="bi bi-wallet2"></i>
+                  Live backend
+                </span>
               </div>
-              <div>
-                <h5 className="fw-bold mb-2">Digital Wallet</h5>
-                <p
-                  className="text-muted-light mb-0"
-                  style={{ fontSize: "0.9rem" }}
-                >
-                  Manage your funds with ease. Deposit, withdraw, and transfer
-                  money instantly with just a few clicks.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col-md-6">
-          <div className="banking-card h-100">
-            <div className="d-flex align-items-start gap-3">
-              <div
-                style={{
-                  width: "48px",
-                  height: "48px",
-                  background: "linear-gradient(135deg, #f59e0b, #d97706)",
-                  borderRadius: "12px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontSize: "1.5rem",
-                }}
-              >
-                <i className="bi bi-clock-history"></i>
-              </div>
-              <div>
-                <h5 className="fw-bold mb-2">Transaction History</h5>
-                <p
-                  className="text-muted-light mb-0"
-                  style={{ fontSize: "0.9rem" }}
-                >
-                  Complete transparency with detailed transaction logs and
-                  real-time balance tracking.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Trust Indicators */}
-      <div className="glass text-center p-5">
-        <h6
-          className="text-muted-light text-uppercase mb-4"
-          style={{ fontSize: "0.75rem", letterSpacing: "0.1em" }}
-        >
-          Powered By
-        </h6>
-        <div className="row align-items-center justify-content-center g-4">
-          <div className="col-auto">
-            <div className="d-flex align-items-center gap-2">
-              <i
-                className="bi bi-server"
-                style={{ fontSize: "1.5rem", color: "#10b981" }}
-              ></i>
-              <span className="fw-semibold">Spring Boot</span>
-            </div>
-          </div>
-          <div className="col-auto">
-            <span className="text-muted-light">•</span>
-          </div>
-          <div className="col-auto">
-            <div className="d-flex align-items-center gap-2">
-              <i
-                className="bi bi-filetype-jsx"
-                style={{ fontSize: "1.5rem", color: "#06b6d4" }}
-              ></i>
-              <span className="fw-semibold">React</span>
-            </div>
-          </div>
-          <div className="col-auto">
-            <span className="text-muted-light">•</span>
-          </div>
-          <div className="col-auto">
-            <div className="d-flex align-items-center gap-2">
-              <i
-                className="bi bi-database"
-                style={{ fontSize: "1.5rem", color: "#f59e0b" }}
-              ></i>
-              <span className="fw-semibold">MySQL</span>
+              <ul className="list-unstyled text-start mb-0 text-muted-light">
+                <li className="d-flex align-items-start gap-3 mb-3">
+                  <i className="bi bi-shield-check text-primary fs-5"></i>
+                  <div>
+                    <div className="fw-semibold text-white">
+                      JWT-secured authentication
+                    </div>
+                    <div className="small">
+                      Spring Security with hashed passwords and refresh tokens.
+                    </div>
+                  </div>
+                </li>
+                <li className="d-flex align-items-start gap-3 mb-3">
+                  <i className="bi bi-bank text-primary fs-5"></i>
+                  <div>
+                    <div className="fw-semibold text-white">
+                      Account + balance service
+                    </div>
+                    <div className="small">
+                      Real account model persisted in MySQL via JPA/Hibernate.
+                    </div>
+                  </div>
+                </li>
+                <li className="d-flex align-items-start gap-3 mb-3">
+                  <i className="bi bi-arrow-left-right text-primary fs-5"></i>
+                  <div>
+                    <div className="fw-semibold text-white">
+                      Deposits, withdrawals, transfers
+                    </div>
+                    <div className="small">
+                      Safe balance locking to prevent race conditions.
+                    </div>
+                  </div>
+                </li>
+                <li className="d-flex align-items-start gap-3">
+                  <i className="bi bi-clock-history text-primary fs-5"></i>
+                  <div>
+                    <div className="fw-semibold text-white">
+                      Transaction history + charts
+                    </div>
+                    <div className="small">
+                      Glassmorphism UI with Recharts for running balance
+                      insights.
+                    </div>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
