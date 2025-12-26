@@ -16,11 +16,13 @@ _.iws
 .classpath
 
 # Build output (we'll rebuild on Railway)
+
 target/
 build/
 \*.class
 
 # Documentation
+
 README.md
 docs/
 
@@ -35,10 +37,10 @@ application-dev.properties
 
 # OS files
 
-.DS_Store
+.DS*Store
 Thumbs.db
-_.swp
-_.bak
+*.swp
+\_.bak
 \*~
 
 # Logs
