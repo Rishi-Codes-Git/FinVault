@@ -1,0 +1,47 @@
+# Git files
+.git
+.gitignore
+.gitattributes
+
+# IDE files
+.idea
+.vscode
+*.iml
+*.iws
+*.ipr
+.settings
+.project
+.classpath
+
+# Build output (we'll rebuild on Railway)
+target/
+build/
+*.class
+
+# Maven wrapper (Railway will use its own)
+.mvn/wrapper/maven-wrapper.jar
+
+# Documentation
+README.md
+docs/
+
+# Test files
+src/test/
+
+# Local config
+application-local.properties
+application-dev.properties
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.bak
+*~
+
+# Logs
+*.log
+logs/
+
+# Frontend (not needed for backend deployment)
+../finvault-frontend/
