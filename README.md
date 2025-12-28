@@ -11,7 +11,7 @@ FinVault is a full-stack digital banking application that simulates real-world b
 <img width="1825" height="858" alt="landing-page" src="https://github.com/user-attachments/assets/ba0b1b6e-160c-40cd-98fe-725bbd99b794" /> <br/>
 <img width="1055" height="866" alt="login,signin" src="https://github.com/user-attachments/assets/4ace8d16-20bc-4d50-901d-cc9214f204db" /> <br/>
 <img width="1530" height="855" alt="dashboard" src="https://github.com/user-attachments/assets/46ff77aa-0861-4849-8372-54df0e4f3474" /> <br/>
-<img width="747" height="1102" alt="withdraw,deposit" src="https://github.com/user-attachments/assets/1c08c058-ee6a-4230-9365-e82dccca3b8d" /><br/>
+<img width="979" height="365" alt="Untitled2" src="https://github.com/user-attachments/assets/557f0174-cef7-428d-a92a-2e6184e3aab2" /><br/>
 <img width="1367" height="812" alt="transhistory" src="https://github.com/user-attachments/assets/da81ba59-1d71-4b53-aae9-f10eaee119af" /> <br/>
 
 ## ✨ Features
