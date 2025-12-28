@@ -18,8 +18,6 @@ FinVault is a full-stack banking application built to simulate real-world digita
 - MySQL (Persistent Storage)
 - JPA / Hibernate
 
----
-
 ## ⭐ Key Features
 
 ### 🔐 **Authentication**
